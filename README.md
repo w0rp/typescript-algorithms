@@ -17,11 +17,13 @@ designed to work in any
 Here is a comprehensive list of every algorithm demonstrated in this repository,
 with links to behaviour tests for each algorithm.
 
-* [`pick(obj, ...keys)`](src/pick.spec.ts) - Pick a subset of keys from
-  an object.
 * [`notNull(x, message?)`](src/not-null.spec.ts) - Return `x`, but throw if `x`
   is `null` or `undefined`. An optional `message` can be provided for showing if
   `x` turns out to be `null` or `undefined`.
+* [`orderBy(cb)`](src/order-by.spec.ts) - Return a callback function for
+  sorting Arrays by particular keys.
+* [`pick(obj, ...keys)`](src/pick.spec.ts) - Pick a subset of keys from
+  an object.
 
 ## Running tests
 
