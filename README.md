@@ -19,3 +19,9 @@ with links to behaviour tests for each algorithm.
 
 * [`pick(obj, ...keys)`](src/pick.spec.ts) - Pick a subset of keys from
   an object.
+
+## Running tests
+
+To run all of the tests on Unix, run `./run-tests`, and hopefully everything
+should go well. You will need to have [yarn](https://yarnpkg.com) installed on
+your system. You should see the results in your browser.
