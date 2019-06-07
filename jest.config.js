@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   name: 'typescript-algorithms',
   transform: {
@@ -10,12 +12,12 @@ module.exports = {
       'jest-html-reporter',
       {
         pageTitle: 'Test Report',
-        outputPath: '.report/jest.html',
+        outputPath: path.resolve(__dirname, '.report', 'jest.html'),
       },
     ],
   ],
   collectCoverage: true,
-  coverageDirectory: './.report/coverage',
+  coverageDirectory: path.resolve(__dirname, '.report', 'coverage'),
   coverageReporters: ['text', 'html'],
   coverageThreshold: {
     global: {
