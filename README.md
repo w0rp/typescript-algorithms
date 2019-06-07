@@ -10,8 +10,7 @@ and used freely by anyone for any reason.
 
 The NPM package has no dependences other than `devDependences`, and the code is
 designed to work in any
-[ECMAScript 2015](https://www.ecma-international.org/ecma-262/6.0/) JavaScript
-environment with a recent stable TypeScript compiler.
+[ECMAScript 2015](https://www.ecma-international.org/ecma-262/6.0/) environment with a recent stable TypeScript compiler.
 
 ## Algorithms
 
