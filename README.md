@@ -14,9 +14,13 @@ environment with a recent stable TypeScript compiler.
 
 ## Algorithms
 
+Code for all of the algorithms below can be viewed by clicking on them, and
+tests showing examples of how to use them can be viewed by clicking the
+wrenches.
+
 ### notNull
 
-[`notNull(x, message?)`](src/not-null.ts) [(:wrench: examples)](src/not-null.spec.ts)
+[`notNull(x, message?)`](src/not-null.ts) [:wrench:](src/not-null.spec.ts)
 
 Return `x`, but throw if `x` is `null` or `undefined`.
 
@@ -25,19 +29,19 @@ or `undefined`.
 
 ### orderBy
 
-[`orderBy(cb)`](src/order-by.ts) [(:wrench: examples)](src/order-by.spec.ts)
+[`orderBy(cb)`](src/order-by.ts) [:wrench:](src/order-by.spec.ts)
 
 Create a comparison function for sorting Arrays by particular keys.
 
 ### pick
 
-[`pick(obj, ...keys)`](src/pick.ts) [(:wrench: examples)](src/pick.spec.ts)
+[`pick(obj, ...keys)`](src/pick.ts) [:wrench:](src/pick.spec.ts)
 
 Pick a subset of keys from an object.
 
 ### uniq
 
-[`uniq(array, cmp)`](src/uniq.ts) [(:wrench: examples)](src/uniq.spec.ts)
+[`uniq(array, cmp)`](src/uniq.ts) [:wrench:](src/uniq.spec.ts)
 
 Create an Array with repeated elements removed.
 
