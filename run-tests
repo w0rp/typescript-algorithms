@@ -57,7 +57,7 @@ fi
 
 mkdir -p .report
 
-node_modules/.bin/jest || RETURN_CODE=1
+HTML_REPORT="$html" COVERAGE=1 node_modules/.bin/jest || RETURN_CODE=1
 
 if ((html)); then
     node_modules/.bin/eslint --ext=.js,.ts src/ \
