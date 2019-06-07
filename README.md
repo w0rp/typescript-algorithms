@@ -17,5 +17,5 @@ designed to work in any
 Here is a comprehensive list of every algorithm demonstrated in this repository,
 with links to behaviour tests for each algorithm.
 
-* [`pick(obj, ...keys)`](src/algorithm/pick.spec.ts) - Pick a subset of keys
-  from an object.
+* [`pick(obj, ...keys)`](src/pick.spec.ts) - Pick a subset of keys from
+  an object.

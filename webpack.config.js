@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/algorithm/index.ts',
+  entry: './src/index.ts',
   mode: 'production',
   target: 'node',
   output: {
