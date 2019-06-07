@@ -19,6 +19,9 @@ with links to behaviour tests for each algorithm.
 
 * [`pick(obj, ...keys)`](src/pick.spec.ts) - Pick a subset of keys from
   an object.
+* [`notNull(x, message?)`](src/not-null.spec.ts) - Return `x`, but throw if `x`
+  is `null` or `undefined`. An optional `message` can be provided for showing if
+  `x` turns out to be `null` or `undefined`.
 
 ## Running tests
 
