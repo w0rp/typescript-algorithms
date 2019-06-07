@@ -1,5 +1,7 @@
 # TypeScript Algorithms
 
+[![Travis CI Build Status](https://travis-ci.com/w0rp/typescript-algorithms.svg?branch=master)](https://travis-ci.com/w0rp/typescript-algorithms)
+
 This repository hosts some TypeScript algorithms which are licensed other the
 [Unlicense](https://unlicense.org/), and therefore released into the public
 domain. The intention of this repository is to share important algorithms for
