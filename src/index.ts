@@ -1,2 +1,2 @@
-export {pick} from './pick'
 export {notNull} from './not-null'
+export {pick} from './pick'
