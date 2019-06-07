@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+set -eu
+
+html=1
+run_yarn=1
+RETURN_CODE=0
+
+while [ $# -ne 0 ]; do
+    case $1 in
+    --no-html)
+        html=0
+        shift
+    ;;
+    --no-yarn)
+        run_yarn=0
+        shift
+    ;;
+    --help)
+        echo 'Usage: ./run-tests [OPTION]...'
+        echo
+        echo 'Run tests for the project.'
+        echo
+        echo 'Options:'
+        echo '  --no-html  Do no show HTML output'
+        echo '  --no-yarn  Do no run yarn'
+        echo '  --         Stop parsing options after this'
+        exit 0
+    ;;
+    --)
+        shift
+        break
+    ;;
+    -?*)
+        echo "Invalid argument: $1" 1>&2
+        exit 1
+    ;;
+    *)
+        break
+    ;;
+    esac
+done
+
+show-in-browser() {
+    if [ -f "$1" ]; then
+        if command -v xdg-open > /dev/null; then
+            xdg-open "$1"
+        else
+            open "$1"
+        fi
+    fi
+}
+
+if ((run_yarn)); then
+    yarn --no-progress --frozen-lockfile --ignore-engines --silent
+fi
+
+mkdir -p .report
+
+node_modules/.bin/jest || RETURN_CODE=1
+
+if ((html)); then
+    node_modules/.bin/eslint --ext=.js,.ts src/ \
+        --format html -o .report/eslint.html || RETURN_CODE=1
+else
+    node_modules/.bin/eslint --ext=.js,.ts src/ || RETURN_CODE=1
+fi
+
+if ((html)); then
+    show-in-browser .report/eslint.html
+    show-in-browser .report/jest.html
+    show-in-browser .report/coverage/index.html
+fi
+
+exit $RETURN_CODE

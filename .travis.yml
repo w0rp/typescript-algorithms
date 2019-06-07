@@ -1,0 +1,12 @@
+---
+language: node_js
+node_js:
+  - '10'
+cache:
+  yarn: true
+  directories:
+    - '.eslintcache'
+    - 'node_modules'
+install: yarn --no-progress --frozen-lockfile --ignore-engines
+script:
+  - ./run-tests --no-html --no-yarn

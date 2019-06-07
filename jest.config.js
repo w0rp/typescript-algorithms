@@ -1,0 +1,28 @@
+module.exports = {
+  name: 'typescript-algorithms',
+  transform: {
+    '^.+\\.ts$': 'ts-jest',
+  },
+  testRegex: '\\.spec\\.ts$',
+  reporters: [
+    'jest-dot-reporter',
+    [
+      'jest-html-reporter',
+      {
+        pageTitle: 'Test Report',
+        outputPath: '.report/jest.html',
+      },
+    ],
+  ],
+  collectCoverage: true,
+  coverageDirectory: './.report/coverage',
+  coverageReporters: ['text', 'html'],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
+}
