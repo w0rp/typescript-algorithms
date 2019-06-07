@@ -24,6 +24,8 @@ with links to behaviour tests for each algorithm.
   sorting Arrays by particular keys.
 * [`pick(obj, ...keys)`](src/pick.spec.ts) - Pick a subset of keys from
   an object.
+* [`uniq(array, cmp)`](src/uniq.spec.ts) - Create an Array with repeated
+  elements removed.
 
 ## Running tests
 
